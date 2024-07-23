@@ -4,6 +4,8 @@ $text = $_POST['testo'];
 
 $word = $_POST['parola'];
 
+$modified_text = str_replace($word, '***', $text);
+
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +29,19 @@ $word = $_POST['parola'];
 
     <h4>
         <?php echo strlen($text) ?> 
+    </h4>
+</div>
+
+
+<div>
+    <h3>Testo modificato</h3>
+    <p>
+        <?php echo $modified_text ?>
+    </p>
+
+    <h3>Lunghezza testo modificato</h3>
+    <h4>
+        <?php echo strlen($modified_text) ?> 
     </h4>
 </div>
 
